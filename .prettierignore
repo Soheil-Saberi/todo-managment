@@ -1,0 +1,7 @@
+dist/
+.next/
+pnpm-lock.yaml
+/node_modules
+.vscode
+.git
+public/
