@@ -3,9 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev -p 3000 & json-server-auth db.json --port 3001",
     "build": "next build",
-    "start": "next start & json-server-auth db.json",
+    "start": "next start",
     "lint": "next lint",
     "lint:fix": "next lint --fix",
     "format": "prettier --write .",
@@ -16,10 +16,16 @@
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
     "@mui/icons-material": "^5.15.1",
+    "@mui/lab": "^5.0.0-alpha.157",
     "@mui/material": "^5.15.1",
+    "@reduxjs/toolkit": "^2.0.1",
+    "cookies-next": "^4.1.0",
     "next": "14.0.4",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "react-hook-form": "^7.49.2",
+    "react-hot-toast": "^2.4.1",
+    "react-redux": "^9.0.4"
   },
   "devDependencies": {
     "@commitlint/cli": "^18.4.3",

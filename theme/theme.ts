@@ -22,9 +22,33 @@ export const lightTheme = createTheme({
       dark: '#ba000d',
       contrastText: '#000',
     },
+    background: {
+      default: '#f5f5f5',
+      paper: '#ffffff',
+    },
   },
   typography: {
     fontFamily: roboto.style.fontFamily,
   },
   components: {},
+})
+
+export const darkTheme = createTheme({
+  ...lightTheme,
+  palette: {
+    ...lightTheme.palette,
+    mode: 'dark',
+    primary: {
+      ...lightTheme.palette.primary,
+      main: '#90caf9',
+    },
+    secondary: {
+      ...lightTheme.palette.secondary,
+      main: '#ffab91',
+    },
+    background: {
+      default: '#303030',
+      paper: '#424242',
+    },
+  },
 })

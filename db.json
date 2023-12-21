@@ -2,8 +2,15 @@
   "users": [
     {
       "email": "admin@mail.com",
-      "password": "$2a$10$CARxZ4xgFu2UwdQ9lm0sDeJYd5bVbb3DUCQ39fO9GlRu2qowxLby2",
+      "password": "$2a$10$.BLYtdllyG7aOknt5YLx5OGmdRatnTPSgnh7JFygM/lmrTr/mjO/C",
+      "name": "admin",
       "id": 1
+    },
+    {
+      "email": "soheil@mail.com",
+      "password": "$2a$10$X19LrNmSbO7rNZXuBr9s0egJe2rYbuKLuThZQgE.JpLEkMd2RPWoW",
+      "name": "soheil",
+      "id": 2
     }
   ]
 }
