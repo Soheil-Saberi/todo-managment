@@ -7,7 +7,7 @@ import { useRouter } from 'next/navigation'
 import { SubmitHandler, useForm } from 'react-hook-form'
 import toast from 'react-hot-toast'
 
-import { useRegisterMutation } from '@/lib/services/auth'
+import { useRegisterMutation } from '@/lib/redux/services/auth'
 
 type RegisterInputs = {
   name: string

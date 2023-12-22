@@ -26,6 +26,10 @@ export const lightTheme = createTheme({
       default: '#f5f5f5',
       paper: '#ffffff',
     },
+    text: {
+      primary: '#000000',
+      secondary: '#000000',
+    },
   },
   typography: {
     fontFamily: roboto.style.fontFamily,
@@ -50,5 +54,12 @@ export const darkTheme = createTheme({
       default: '#303030',
       paper: '#424242',
     },
+    text: {
+      primary: '#ffffff',
+      secondary: '#ffffff',
+    },
+  },
+  typography: {
+    fontFamily: roboto.style.fontFamily,
   },
 })

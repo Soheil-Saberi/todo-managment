@@ -1,3 +1,3 @@
-import { todoApi } from '../services'
+import { todoApi } from './services'
 
 export const middlewares = [todoApi.middleware]

@@ -7,7 +7,7 @@ import { useRouter } from 'next/navigation'
 import { SubmitHandler, useForm } from 'react-hook-form'
 import toast from 'react-hot-toast'
 
-import { useLoginMutation } from '@/lib/services/auth'
+import { useLoginMutation } from '@/lib/redux/services/auth'
 
 type LoginInputs = {
   email: string
