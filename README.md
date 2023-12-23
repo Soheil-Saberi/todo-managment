@@ -35,3 +35,5 @@ Open http://localhost:3000
 ## Tech Stack
 
 **Client:** TypeScript, Next.js, MUI, Redux-Toolkit, RTK-Query
+
+**Server:** json-server

@@ -25,35 +25,35 @@
       "title": "test2",
       "description": "test2",
       "userId": 2,
-      "status": "doing",
+      "status": "todo",
       "id": 2
     },
     {
       "title": "test3",
       "description": "test3",
       "userId": 2,
-      "status": "doing",
+      "status": "todo",
       "id": 3
     },
     {
       "title": "test4",
       "description": "test4",
       "userId": 2,
-      "status": "doing",
+      "status": "todo",
       "id": 4
     },
     {
       "title": "test5",
       "description": "test5",
       "userId": 2,
-      "status": "doing",
+      "status": "todo",
       "id": 5
     },
     {
       "title": "test7",
       "description": "test7",
       "userId": 2,
-      "status": "done",
+      "status": "todo",
       "id": 7
     },
     {

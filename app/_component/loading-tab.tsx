@@ -7,7 +7,7 @@ const LoadingTab = () => {
       flexDirection="column"
       alignItems="center"
       justifyContent="center"
-      sx={{ minHeight: 500 }}
+      sx={{ minHeight: 450 }}
     >
       <CircularProgress />
     </Box>

@@ -12,7 +12,7 @@ const ErrorTab = ({ retryHandler }: ErrorTabProps) => {
       alignItems="center"
       justifyContent="center"
       gap={2}
-      sx={{ minHeight: 500 }}
+      sx={{ minHeight: 450 }}
     >
       <Typography>Error, try again</Typography>
       <Button onClick={retryHandler} variant="outlined">

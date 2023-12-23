@@ -30,7 +30,10 @@ const DoneTab = ({ search, userId }: TodoTabProps) => {
 
   return isSuccess && !!data.items.length ? (
     <Box
-      height="100%"
+      sx={{
+        height: 1,
+        minHeight: 450,
+      }}
       display="flex"
       flexDirection="column"
       justifyContent="space-between"

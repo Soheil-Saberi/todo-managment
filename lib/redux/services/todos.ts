@@ -47,7 +47,7 @@ const todosApi = todoApi.injectEndpoints({
           values.page
         }&_limit=4${values.search && `&q=${values.search}`}`,
       }),
-      transformResponse: (response, meta, _) => {
+      transformResponse: (response: any, meta: any, _: any) => {
         const total = Number(meta?.response?.headers.get('X-Total-Count'))
         return {
           items: response as Todo[],

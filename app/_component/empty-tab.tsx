@@ -7,7 +7,7 @@ const EmptyTab = () => {
       flexDirection="column"
       alignItems="center"
       justifyContent="center"
-      sx={{ minHeight: 500 }}
+      sx={{ minHeight: 450 }}
     >
       <Typography variant="h5">No Data!</Typography>
     </Box>

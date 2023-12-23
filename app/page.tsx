@@ -90,7 +90,7 @@ export default function Home() {
                 router.replace('/login')
               }}
             >
-              <Logout />
+              <Logout color="primary" />
             </IconButton>
           </Box>
         </Box>

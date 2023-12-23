@@ -34,7 +34,10 @@ const TodoTab = ({ userId, search }: TodoTabProps) => {
 
   return isSuccess && !!data.items.length ? (
     <Box
-      height={1}
+      sx={{
+        height: 1,
+        minHeight: 450,
+      }}
       display="flex"
       flexDirection="column"
       justifyContent="space-between"
