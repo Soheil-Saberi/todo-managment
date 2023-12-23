@@ -1,13 +1,23 @@
 'use client'
 
+import { DarkMode, LightMode } from '@mui/icons-material'
 import { LoadingButton } from '@mui/lab'
-import { Box, Button, CardContent, TextField, Typography } from '@mui/material'
+import {
+  Box,
+  Button,
+  CardContent,
+  IconButton,
+  TextField,
+  Typography,
+} from '@mui/material'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import { SubmitHandler, useForm } from 'react-hook-form'
 import toast from 'react-hot-toast'
 
 import { useLoginMutation } from '@/lib/redux/services/auth'
+import { UserActions } from '@/lib/redux/slices/user'
+import { useDispatch, useSelector } from '@/lib/redux/store'
 
 type LoginInputs = {
   email: string
@@ -16,6 +26,9 @@ type LoginInputs = {
 
 export default function Login() {
   const router = useRouter()
+
+  const dispatch = useDispatch()
+  const user = useSelector((state) => state.user)
 
   const [loginUser, { isLoading }] = useLoginMutation()
 
@@ -38,9 +51,18 @@ export default function Login() {
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
       <CardContent sx={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
-        <Typography sx={{ fontWeight: 'bold' }} variant="h5">
-          Login
-        </Typography>
+        <Box display="flex" alignItems="center" justifyContent="space-between">
+          <Typography sx={{ fontWeight: 'bold' }} variant="h5">
+            Login
+          </Typography>
+          <IconButton onClick={() => dispatch(UserActions.toggleTheme())}>
+            {user.theme === 'light' ? (
+              <LightMode />
+            ) : (
+              <DarkMode color="secondary" />
+            )}
+          </IconButton>
+        </Box>
         <Box display="flex" flexDirection="column" gap={2}>
           <TextField
             type="email"

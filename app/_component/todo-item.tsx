@@ -52,12 +52,14 @@ const TodoItem = ({ todo }: TodoItemProps) => {
         display="flex"
         flexDirection={{ xs: 'column', sm: 'row' }}
         alignItems={{ xs: 'initial', sm: 'center' }}
-        gap={{ xs: 2, sm: 0 }}
+        gap={2}
         justifyContent="space-between"
       >
         <Box flex="1" gap={{ xs: 0, sm: 2 }}>
           <Typography sx={{ fontWeight: 'bold' }}>{todo.title}</Typography>
-          <Typography>{todo.description}</Typography>
+          <Typography sx={{ wordBreak: 'break-word', lineClamp: 2 }}>
+            {todo.description}
+          </Typography>
         </Box>
         <Box
           display="flex"

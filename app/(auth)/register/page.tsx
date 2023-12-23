@@ -1,13 +1,23 @@
 'use client'
 
+import { DarkMode, LightMode } from '@mui/icons-material'
 import { LoadingButton } from '@mui/lab'
-import { Box, Button, CardContent, TextField, Typography } from '@mui/material'
+import {
+  Box,
+  Button,
+  CardContent,
+  IconButton,
+  TextField,
+  Typography,
+} from '@mui/material'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import { SubmitHandler, useForm } from 'react-hook-form'
 import toast from 'react-hot-toast'
 
 import { useRegisterMutation } from '@/lib/redux/services/auth'
+import { UserActions } from '@/lib/redux/slices/user'
+import { useDispatch, useSelector } from '@/lib/redux/store'
 
 type RegisterInputs = {
   name: string
@@ -17,6 +27,9 @@ type RegisterInputs = {
 
 export default function Register() {
   const router = useRouter()
+
+  const dispatch = useDispatch()
+  const user = useSelector((state) => state.user)
 
   const [registerUser, { isLoading }] = useRegisterMutation()
 
@@ -39,9 +52,18 @@ export default function Register() {
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
       <CardContent sx={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
-        <Typography sx={{ fontWeight: 'bold' }} variant="h5">
-          Register
-        </Typography>
+        <Box display="flex" alignItems="center" justifyContent="space-between">
+          <Typography sx={{ fontWeight: 'bold' }} variant="h5">
+            Register
+          </Typography>
+          <IconButton onClick={() => dispatch(UserActions.toggleTheme())}>
+            {user.theme === 'light' ? (
+              <LightMode />
+            ) : (
+              <DarkMode color="secondary" />
+            )}
+          </IconButton>
+        </Box>
         <Box display="flex" flexDirection="column" gap={2}>
           <TextField
             error={!!errors.name}
