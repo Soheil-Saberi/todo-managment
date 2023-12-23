@@ -5,77 +5,7 @@
       "password": "$2a$10$.BLYtdllyG7aOknt5YLx5OGmdRatnTPSgnh7JFygM/lmrTr/mjO/C",
       "name": "admin",
       "id": 1
-    },
-    {
-      "email": "soheil@mail.com",
-      "password": "$2a$10$X19LrNmSbO7rNZXuBr9s0egJe2rYbuKLuThZQgE.JpLEkMd2RPWoW",
-      "name": "soheil",
-      "id": 2
     }
   ],
-  "todos": [
-    {
-      "title": "test1 change",
-      "description": "test1change.....",
-      "userId": 2,
-      "status": "todo",
-      "id": 1
-    },
-    {
-      "title": "test2",
-      "description": "test2",
-      "userId": 2,
-      "status": "todo",
-      "id": 2
-    },
-    {
-      "title": "test3",
-      "description": "test3",
-      "userId": 2,
-      "status": "todo",
-      "id": 3
-    },
-    {
-      "title": "test4",
-      "description": "test4",
-      "userId": 2,
-      "status": "todo",
-      "id": 4
-    },
-    {
-      "title": "test5",
-      "description": "test5",
-      "userId": 2,
-      "status": "todo",
-      "id": 5
-    },
-    {
-      "title": "test7",
-      "description": "test7",
-      "userId": 2,
-      "status": "todo",
-      "id": 7
-    },
-    {
-      "title": "app",
-      "description": "application",
-      "userId": 2,
-      "status": "todo",
-      "id": 8
-    },
-    {
-      "title": "web",
-      "description": "website",
-      "userId": 2,
-      "status": "todo",
-      "id": 9
-    },
-    {
-      "title": "android",
-      "description": "Adnroid system",
-      "userId": 2,
-      "status": "todo",
-      "id": 10
-    }
-  ]
+  "todos": []
 }
