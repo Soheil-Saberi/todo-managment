@@ -4,6 +4,7 @@ import { Add, DarkMode, LightMode, Logout } from '@mui/icons-material'
 import {
   Box,
   Button,
+  Card,
   Grid,
   IconButton,
   Tab,
@@ -62,8 +63,10 @@ export default function Home() {
         alignItems="center"
         gap={6}
         item
-        xs={6}
-        sx={{ width: 1 }}
+        lg={6}
+        md={10}
+        sm={12}
+        sx={{ width: 1, px: { sm: 2, xs: 2 } }}
       >
         <Box
           sx={{ width: 1 }}
@@ -91,7 +94,15 @@ export default function Home() {
             </IconButton>
           </Box>
         </Box>
-        <Typography sx={{ fontWeight: 'bold' }} variant="h4">
+        <Typography
+          sx={{
+            typography: {
+              md: 'h4',
+              sm: 'h5',
+              xs: 'h6',
+            },
+          }}
+        >
           Todo Management
         </Typography>
         <Box
@@ -105,18 +116,26 @@ export default function Home() {
             display="flex"
             alignItems="center"
             justifyContent="space-between"
-            sx={{ width: 1 }}
+            sx={{
+              width: 1,
+              flexDirection: { xs: 'column-reverse', sm: 'row' },
+              gap: { xs: 1, sm: 0 },
+            }}
           >
             <TextField
               value={searchValue}
               onChange={(event) => setSearchValue(event.target.value)}
               size="small"
               placeholder="Search ..."
+              sx={{ width: { xs: 1, sm: 'auto' } }}
             />
             <Button
               onClick={() => setIsShowTodoModal(true)}
               variant="contained"
-              sx={{ alignSelf: 'flex-end' }}
+              sx={{
+                alignSelf: { xs: 'center', sm: 'flex-end' },
+                width: { xs: 1, sm: 'auto' },
+              }}
             >
               Add Todo <Add />
             </Button>
@@ -128,13 +147,23 @@ export default function Home() {
               <Tab label="Done" id="done-tab" />
             </Tabs>
             <Box role="tabpanel">
-              {selectedTab === 0 ? (
-                <TodoTab userId={user.id!} search={search} />
-              ) : selectedTab === 1 ? (
-                <DoingTab userId={user.id!} search={search} />
-              ) : (
-                <DoneTab userId={user.id!} search={search} />
-              )}
+              <Card
+                sx={{
+                  width: 1,
+                  paddingX: 2,
+                  paddingY: 4,
+                  height: 1,
+                  minHeight: 500,
+                }}
+              >
+                {selectedTab === 0 ? (
+                  <TodoTab userId={user.id!} search={search} />
+                ) : selectedTab === 1 ? (
+                  <DoingTab userId={user.id!} search={search} />
+                ) : (
+                  <DoneTab userId={user.id!} search={search} />
+                )}
+              </Card>
             </Box>
           </Box>
         </Box>

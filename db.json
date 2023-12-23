@@ -18,49 +18,42 @@
       "title": "test1 change",
       "description": "test1change.....",
       "userId": 2,
-      "status": "done",
+      "status": "todo",
       "id": 1
     },
     {
       "title": "test2",
       "description": "test2",
       "userId": 2,
-      "status": "todo",
+      "status": "doing",
       "id": 2
     },
     {
       "title": "test3",
       "description": "test3",
       "userId": 2,
-      "status": "todo",
+      "status": "doing",
       "id": 3
     },
     {
       "title": "test4",
       "description": "test4",
       "userId": 2,
-      "status": "todo",
+      "status": "doing",
       "id": 4
     },
     {
       "title": "test5",
       "description": "test5",
       "userId": 2,
-      "status": "todo",
+      "status": "doing",
       "id": 5
-    },
-    {
-      "title": "test6",
-      "description": "test6",
-      "userId": 2,
-      "status": "todo",
-      "id": 6
     },
     {
       "title": "test7",
       "description": "test7",
       "userId": 2,
-      "status": "todo",
+      "status": "done",
       "id": 7
     },
     {

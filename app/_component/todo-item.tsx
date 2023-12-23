@@ -50,16 +50,23 @@ const TodoItem = ({ todo }: TodoItemProps) => {
       <Box
         p={2}
         display="flex"
-        alignItems="center"
+        flexDirection={{ xs: 'column', sm: 'row' }}
+        alignItems={{ xs: 'initial', sm: 'center' }}
+        gap={{ xs: 2, sm: 0 }}
         justifyContent="space-between"
       >
-        <Box display="flex" flexDirection="column" gap={2}>
+        <Box flex="1" gap={{ xs: 0, sm: 2 }}>
           <Typography sx={{ fontWeight: 'bold' }}>{todo.title}</Typography>
           <Typography>{todo.description}</Typography>
         </Box>
-        <Box display="flex" alignItems="center" gap={2}>
+        <Box
+          display="flex"
+          alignItems="center"
+          gap={2}
+          sx={{ flexDirection: { xs: 'column', sm: 'row' } }}
+        >
           <TextField
-            sx={{ width: 150 }}
+            sx={{ width: { xs: 1, sm: 200, md: 150 } }}
             size="small"
             select
             defaultValue={todo.status}
@@ -72,14 +79,16 @@ const TodoItem = ({ todo }: TodoItemProps) => {
               </MenuItem>
             ))}
           </TextField>
-          <Link href={`/todo/${todo.id}`}>
-            <IconButton>
-              <Edit color="primary" />
+          <Box display="flex" alignItems="center" gap={2}>
+            <Link href={`/todo/${todo.id}`}>
+              <IconButton>
+                <Edit color="primary" />
+              </IconButton>
+            </Link>
+            <IconButton onClick={handleDelete}>
+              <Delete color="error" />
             </IconButton>
-          </Link>
-          <IconButton onClick={handleDelete}>
-            <Delete color="error" />
-          </IconButton>
+          </Box>
         </Box>
       </Box>
     </Card>

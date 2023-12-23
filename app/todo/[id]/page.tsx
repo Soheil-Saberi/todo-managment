@@ -80,8 +80,10 @@ export default function TodoDetails({ params }: { params: { id: string } }) {
           alignItems="center"
           gap={6}
           item
-          xs={6}
-          sx={{ width: 1 }}
+          lg={6}
+          md={10}
+          sm={12}
+          sx={{ width: 1, px: { sm: 2, xs: 2 } }}
         >
           <Typography sx={{ fontWeight: 'bold' }} variant="h4">
             Edit Todo
@@ -100,6 +102,7 @@ export default function TodoDetails({ params }: { params: { id: string } }) {
                     alignItems="center"
                     justifyContent="space-between"
                     gap={2}
+                    sx={{ flexDirection: { xs: 'column', sm: 'row' } }}
                   >
                     <TextField
                       error={!!errors.title}
@@ -151,6 +154,8 @@ export default function TodoDetails({ params }: { params: { id: string } }) {
                     display="flex"
                     alignItems="center"
                     justifyContent="space-between"
+                    gap={2}
+                    sx={{ flexDirection: { xs: 'column-reverse', sm: 'row' } }}
                   >
                     <Link href="/">
                       <Button>Back to Home</Button>
@@ -160,7 +165,10 @@ export default function TodoDetails({ params }: { params: { id: string } }) {
                       disabled={!isDirty}
                       type="submit"
                       variant="contained"
-                      sx={{ alignSelf: 'flex-end' }}
+                      sx={{
+                        alignSelf: 'flex-end',
+                        width: { xs: 1, sm: 'auto' },
+                      }}
                     >
                       Save
                     </LoadingButton>

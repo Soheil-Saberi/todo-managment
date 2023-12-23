@@ -17,17 +17,6 @@ export type AddTodoInputs = {
   description: string
 }
 
-const BoxStyle = {
-  position: 'absolute' as 'absolute',
-  top: '50%',
-  left: '50%',
-  transform: 'translate(-50%, -50%)',
-  width: 400,
-  bgcolor: 'background.paper',
-  boxShadow: 24,
-  p: 2,
-}
-
 const TodoModal = ({
   open,
   onClose,
@@ -61,7 +50,16 @@ const TodoModal = ({
       <form onSubmit={handleSubmit(onSubmit)}>
         <Box
           borderRadius={1}
-          sx={BoxStyle}
+          sx={{
+            position: 'absolute',
+            top: '50%',
+            left: '50%',
+            transform: 'translate(-50%, -50%)',
+            width: { xs: 300, sm: 350, md: 400 },
+            bgcolor: 'background.paper',
+            boxShadow: 24,
+            p: 2,
+          }}
           display="flex"
           flexDirection="column"
           alignItems="center"
