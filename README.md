@@ -30,7 +30,11 @@ Start the server
 
 Open http://localhost:3000
 
-#### Please register first to access todo management
+#### Please register first to access todo management (Use test account to log in)
+
+#### username:admin
+
+#### password:admin123
 
 ## Tech Stack
 
